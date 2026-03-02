@@ -6,12 +6,18 @@ A floral, classy, minimalistic multi-page study website.
 
 - `index.html` — Home page (landing + feature highlights)
 - `planner.html` — Interactive planner widgets (to-do, pomodoro, syllabus/energy, schedule)
+ main
+- `about.html` — About page you can personalize with your story
+- `styles.css` — Shared design system and page styling
+- `app.js` — Planner logic only
+
 - `learn.html` — Dedicated page explaining how planning improves motivation and study consistency
 - `about.html` — About page with Ria's profile, purpose, and goals
 - `login.html` — Admin login
 - `admin.html` — Admin dashboard to manage announcement banner + motivational lines
 - `styles.css` — Shared design system and page styling
 - `app.js` — Planner + login/admin logic
+ codex/start-coding-website-product-layout-0e4t4u
 
 ## Run locally
 
@@ -25,6 +31,12 @@ Open:
 - `http://localhost:5173/learn.html`
 - `http://localhost:5173/about.html`
 - `http://localhost:5173/login.html`
+
+## Customize quickly
+
+1. Edit your personal text in `about.html` under **Who I Am**, **Why This Website Exists**, and **My Goals**.
+2. Adjust colors in `styles.css` (`:root` variables).
+3. Add or replace motivational lines in `app.js` (`motivationLines` array).
 
 ## Admin demo credentials
 
