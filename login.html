@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomStudy | Admin Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="petals" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html">BloomStudy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="planner.html">Planner</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="login.html" class="active">Login</a>
+      </nav>
+    </header>
+
+    <main class="page narrow">
+      <section class="card">
+        <p class="eyebrow">Admin Access</p>
+        <h1>Login</h1>
+        <p>Use your admin credentials to manage motivation lines and announcements.</p>
+        <form id="loginForm" class="stack">
+          <label>
+            Username
+            <input id="usernameInput" type="text" required />
+          </label>
+          <label>
+            Password
+            <input id="passwordInput" type="password" required />
+          </label>
+          <button class="btn" type="submit">Sign In</button>
+        </form>
+        <p class="hint">Demo credentials: <strong>ria / bloomstudy123</strong></p>
+        <p id="loginMessage" class="error-text"></p>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <p>© 2026 BloomStudy · Built with focus and flowers 🌸</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomStudy | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="petals" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html">BloomStudy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="planner.html">Planner</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </header>
+
+    <main id="adminPanel" class="page">
+      <section class="card">
+        <div class="row row-between">
+          <div>
+            <p class="eyebrow">Admin Dashboard</p>
+            <h1>Content Control</h1>
+          </div>
+          <button id="logoutBtn" class="btn btn-ghost" type="button">Logout</button>
+        </div>
+        <p>Manage site announcements and motivational lines shown in the planner.</p>
+      </section>
+
+      <section class="layout-grid">
+        <article class="card">
+          <h2>Announcement Banner</h2>
+          <label>
+            Message shown on Home / Learn pages
+            <textarea id="announcementInput" rows="4" placeholder="Ex: Mock exams next week, plan revision early."></textarea>
+          </label>
+          <div class="hero-actions">
+            <button id="saveAnnouncementBtn" class="btn" type="button">Save Announcement</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Motivation Lines</h2>
+          <form id="quoteForm" class="row">
+            <input id="quoteInput" type="text" placeholder="Add a new motivational line" required />
+            <button class="btn" type="submit">Add</button>
+          </form>
+          <ul id="quoteList" class="todo-list"></ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <p id="adminMessage" class="hint"></p>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <p>© 2026 BloomStudy · Built with focus and flowers 🌸</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

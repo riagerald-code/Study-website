@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomStudy | Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="petals" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html">BloomStudy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="planner.html" class="active">Planner</a>
+        <a href="learn.html">Learn</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="page planner-page">
+      <section class="hero card compact">
+        <p class="eyebrow">Your calm dashboard</p>
+        <h1>Study Planner</h1>
+        <p>Design your day with intentional focus and soft structure.</p>
+      </section>
+
+      <section class="layout-grid">
+        <article class="card todo-card">
+          <h2>To-Do</h2>
+          <form id="todoForm" class="row">
+            <input id="todoInput" type="text" placeholder="Add a study task..." required />
+            <button class="btn" type="submit">Add</button>
+          </form>
+          <ul id="todoList" class="todo-list"></ul>
+        </article>
+
+        <article class="card pomodoro-card">
+          <h2>Pomodoro</h2>
+          <p id="pomodoroLabel" class="pomodoro-label">Focus Session</p>
+          <p id="timerDisplay" class="timer">25:00</p>
+          <div class="row timer-actions">
+            <button id="startTimerBtn" class="btn" type="button">Start</button>
+            <button id="pauseTimerBtn" class="btn btn-secondary" type="button">Pause</button>
+            <button id="resetTimerBtn" class="btn btn-ghost" type="button">Reset</button>
+          </div>
+        </article>
+
+        <article class="card syllabus-card">
+          <h2>Syllabus + Energy</h2>
+          <form id="syllabusForm" class="stack">
+            <label>
+              Topics (one per line)
+              <textarea
+                id="syllabusInput"
+                rows="6"
+                placeholder="Ex: Algebra\nPhysics Chapter 2\nHistory Essay"
+              ></textarea>
+            </label>
+            <label>
+              Hours available per day
+              <input id="hoursInput" type="number" min="1" max="12" value="3" required />
+            </label>
+            <label>
+              Energy level today: <span id="energyValue">3</span>/5
+              <input id="energyInput" type="range" min="1" max="5" value="3" />
+            </label>
+            <label>
+              Plan length
+              <select id="planLength">
+                <option value="7">1 Week</option>
+                <option value="30">1 Month</option>
+              </select>
+            </label>
+          </form>
+        </article>
+
+        <article class="card motivation-card">
+          <h2>Motivation</h2>
+          <blockquote id="motivationQuote" class="quote"></blockquote>
+          <div class="hero-actions">
+            <button id="newQuoteBtn" class="btn btn-secondary">New Line</button>
+            <button id="generateScheduleBtn" class="btn">Generate Schedule</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="card schedule-card">
+        <h2>Auto Schedule</h2>
+        <p class="hint">Generated from your topics, daily hours, and current energy level.</p>
+        <div id="scheduleOutput" class="schedule-output"></div>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <p>© 2026 BloomStudy · Built with focus and flowers 🌸</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
