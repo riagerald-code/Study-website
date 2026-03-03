@@ -1,4 +1,4 @@
-# BloomStudy Planner
+# StudySmart Planner
 
 A floral, classy, minimalistic multi-page study website.
 
